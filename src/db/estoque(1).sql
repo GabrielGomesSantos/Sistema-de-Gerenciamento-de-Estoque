@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Mar-2024 às 18:21
+-- Tempo de geração: 20-Mar-2024 às 20:31
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
 
@@ -20,6 +20,73 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `estoque`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcoes`
+--
+
+CREATE TABLE `funcoes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Extraindo dados da tabela `funcoes`
+--
+
+INSERT INTO `funcoes` (`id`, `nome`) VALUES
+(1, 'Administrador'),
+(2, 'Funcionário Regular'),
+(3, 'Chefe de Departamento');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcoes_permissoes`
+--
+
+CREATE TABLE `funcoes_permissoes` (
+  `id_funcao` int(11) NOT NULL,
+  `id_permissao` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Extraindo dados da tabela `funcoes_permissoes`
+--
+
+INSERT INTO `funcoes_permissoes` (`id_funcao`, `id_permissao`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(2, 4),
+(3, 1),
+(3, 2),
+(3, 3),
+(3, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `permissoes`
+--
+
+CREATE TABLE `permissoes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Extraindo dados da tabela `permissoes`
+--
+
+INSERT INTO `permissoes` (`id`, `nome`) VALUES
+(1, 'Adicionar Produto'),
+(2, 'Editar Produto'),
+(3, 'Excluir Produto'),
+(4, 'Visualizar Relatórios');
 
 -- --------------------------------------------------------
 
@@ -85,9 +152,51 @@ INSERT INTO `produtos` (`id`, `nome`, `descricao`, `qnt`, `preco`) VALUES
 (43, 'Regata Masculina Branca', 'Regata masculina branca, tecido leve', 100, '10'),
 (44, 'Regata Masculina Preta', 'Regata masculina preta, algodão macio', 95, '10');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) DEFAULT NULL,
+  `senha` varchar(255) DEFAULT NULL,
+  `user` varchar(255) DEFAULT NULL,
+  `id_funcao` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `senha`, `user`, `id_funcao`) VALUES
+(1, 'João', 'senha123', 'Joao', 1),
+(2, 'andre Calor Mota', '123123', 'andreMota', 2),
+(4, 'Josi', '321', 'Josibass', 3);
+
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `funcoes`
+--
+ALTER TABLE `funcoes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `funcoes_permissoes`
+--
+ALTER TABLE `funcoes_permissoes`
+  ADD PRIMARY KEY (`id_funcao`,`id_permissao`),
+  ADD KEY `id_permissao` (`id_permissao`);
+
+--
+-- Índices para tabela `permissoes`
+--
+ALTER TABLE `permissoes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `produtos`
@@ -96,14 +205,56 @@ ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_funcao` (`id_funcao`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `funcoes`
+--
+ALTER TABLE `funcoes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `permissoes`
+--
+ALTER TABLE `permissoes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `funcoes_permissoes`
+--
+ALTER TABLE `funcoes_permissoes`
+  ADD CONSTRAINT `funcoes_permissoes_ibfk_1` FOREIGN KEY (`id_funcao`) REFERENCES `funcoes` (`id`),
+  ADD CONSTRAINT `funcoes_permissoes_ibfk_2` FOREIGN KEY (`id_permissao`) REFERENCES `permissoes` (`id`);
+
+--
+-- Limitadores para a tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_funcao`) REFERENCES `funcoes` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

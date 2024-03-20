@@ -1,4 +1,8 @@
 <?php
+    //Inicio da Sessão
+
+    session_start(); 
+    
     //arquivo de conexao com banco de dados
     include("conexao.php");
 
@@ -22,10 +26,11 @@
 
     foreach($saida as $users){
         $encontrado = false;
+        $_SESSION['perm'] = null;
         if($users['user'] === $user and $users['senha'] === $password){
-            echo("Bem-Vindo " . $users['user']);
+            $_SESSION['perm'] = $users['id_funcao'];
             $encontrado = true;
-            exit();
+            break;
         }
     }
 
@@ -36,6 +41,7 @@
 
     mysqli_close($conn);
 
+    print_r($_SESSION['perm']);
 
 
 ?>

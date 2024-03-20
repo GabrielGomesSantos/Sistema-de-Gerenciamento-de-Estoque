@@ -31,7 +31,7 @@
             ?>
             <?php
                 
-                 asd
+                
                 $result = mysqli_query($conn, $sql); // Executa a consulta SQL
 
                 if (mysqli_num_rows($result) > 0) { // Verifica se existem resultados
