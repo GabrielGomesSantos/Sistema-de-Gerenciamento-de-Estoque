@@ -1,0 +1,73 @@
+*{
+    font-family: "Podkova", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+table, td, th, tr {
+    border: 2px white solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+
+input {
+    font-size: 15px;
+}
+table {
+    margin: 20px;
+    
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.272);
+    
+}
+
+.content {
+    display: flex;
+  
+    height: 1000px;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: scroll;
+    
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(186, 186, 186, 0.153);
+}
+
+
+
+th {
+    background-color: rgba(4, 19, 0, 0.968) ;
+    color: white;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputext {
+    width: 300px;
+}
+
+input {
+    padding: 4px;
+}
+
+.preco {
+    font-weight: bold;
+}
