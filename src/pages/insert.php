@@ -12,7 +12,7 @@
     <form method="post" action="processar_insert.php">
 
         <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+        <input type="text" id="nome" name="name" required><br><br>
 
         <label for="descricao">Descrição:</label><br>
         <input type="text" id="descricao" name="descricao" required><br><br>
@@ -21,7 +21,7 @@
         <input type="number" id="quantidade" name="quantidade" required><br><br>
 
         <label for="preco">Preço:</label><br>
-        <input type="number" id="preco" name="preco" step="0.01" required><br><br>
+        <input type="number" id="preco" name="preco" required><br><br>
 
         <input type="submit" value="Enviar">
 
