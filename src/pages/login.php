@@ -29,19 +29,21 @@
         $_SESSION['perm'] = null;
         if($users['user'] === $user and $users['senha'] === $password){
             $_SESSION['perm'] = $users['id_funcao'];
+            print_r($users['id_funcao']);
             $encontrado = true;
             break;
         }
     }
 
-    
     if(!$encontrado){
-        echo("Usuario e/ou senha invalidos");
+        echo("Usuário e/ou senha inválidos");
+        header("Refresh: 2; URL=painel_de_login.php");
+        exit; 
     }
+    
 
     mysqli_close($conn);
 
-    print_r($_SESSION['perm']);
 
-
+    header("location: ../../index.php")
 ?>

@@ -1,0 +1,17 @@
+
+            <?php 
+                if($_SESSION['perm'] == 1 or $_SESSION['perm'] == 3){
+                    echo("
+                        
+                    ")
+                }
+
+
+            ?>
+    
+
+    <div class='button_header'>
+                <button>
+                    <p>Adicionar</p>
+                </button>
+            </div>

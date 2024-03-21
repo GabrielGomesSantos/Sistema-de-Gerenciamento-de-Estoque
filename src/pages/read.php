@@ -7,11 +7,6 @@
 </head>
 <body>
 
-    <!-- FORM PARA BUSCAR  -->
-    <form action="read.php" method="GET">
-        <input class='inputext' type="text" name="busca" id="busca" placeholder="Digite sua busca aqui">
-        <input class='botaobuscar' type="submit" value="BUSCAR">
-    </form>
    
     <!-- TABLE PARA IMPRIMIR O BANCO DE DADOS  -->
     <table border="1">
