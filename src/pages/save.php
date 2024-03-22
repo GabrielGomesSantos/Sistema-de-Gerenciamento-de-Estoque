@@ -17,7 +17,7 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
-header("Location: read.php");
+header("Location: read.php#$_GET[id]");
 
 
 ?>
