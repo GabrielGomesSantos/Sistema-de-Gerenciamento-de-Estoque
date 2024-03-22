@@ -37,15 +37,14 @@
                         $sql = "SELECT * FROM $nome_da_table";
                     }
                 
-<<<<<<< Updated upstream
+
 
                 $result = mysqli_query($conn, $sql); // Executa a consulta SQL
-=======
-               
+     
                     
                     
                     $result = mysqli_query($conn, $sql); // Executa a consulta SQL
->>>>>>> Stashed changes
+
 
                     if (mysqli_num_rows($result) > 0) { // Verifica se existem resultados
                         echo "<tr>
@@ -69,16 +68,19 @@
             <?php 
                  // Loop para imprimir os resultados
                  while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>
+                    
+                    echo "<tr id='$row[id]'>
                            
                             <td>$row[nome]</td>
                             <td>$row[descricao]</td>
                             <td>$row[qnt]</td>
                             <td class='preco'>R$:$row[preco]</td>
                             <td> <a href='update.php?id=$row[id]'><button>EDITAR</button></a></td>
-                            <td> <a href='#update'><button>REMOVER</button></a></td>
+                            <td> <a href=''><button>REMOVER</button></a></td>
                           </tr>";
+                   
                 }
+             
             
             
             ?> 
