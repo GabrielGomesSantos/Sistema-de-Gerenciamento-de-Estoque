@@ -80,10 +80,11 @@
 
                 <div class="conteudo_index">
                     <?php include("src/pages/read.php")?>
+                    
+                    <br><br>
+                    <?php include("src/pages/avisos.php")?>
+                    
                 </div>
-                <aside>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia veniam, libero ipsam consequuntur illo aliquam deserunt, praesentium placeat corrupti obcaecati consequatur aperiam sed facere fugit expedita? Reprehenderit nostrum soluta perspiciatis.</p>
-                </aside>
         </html>
     <body>
     </html>

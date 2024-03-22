@@ -27,6 +27,7 @@ table {
 }
 
 .content {
+    width: 50%;
     max-height: 700px; /* Defina a altura máxima desejada para a área de rolagem */
     overflow-y: auto; /* Habilita a rolagem vertical */
     margin: 0 auto; /* Centraliza a tabela */
@@ -69,9 +70,12 @@ input {
 }
 
 .table-container {
-    max-height: 700px; /* Defina a altura máxima desejada para a área de rolagem */
-    overflow-y: auto; /* Habilita a rolagem vertical */
+    width: 80%; /* Reduz a largura da tabela */
+    max-height: 700px; /* Mantém a altura máxima desejada para a área de rolagem */
+    overflow-y: auto; /* Habilita a rolagem vertical, se necessário */
+    margin: 0 auto; /* Centraliza a tabela */
 }
+
 
 .table-container::-webkit-scrollbar {
     display: none;
