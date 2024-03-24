@@ -36,8 +36,7 @@
     }
 
     if(!$encontrado){
-        echo("Usuário e/ou senha inválidos");
-        header("Refresh: 2; URL=painel_de_login.php");
+        header("Refresh: 0; URL=painel_de_login.php?ERROR=1");
         exit; 
     }
     

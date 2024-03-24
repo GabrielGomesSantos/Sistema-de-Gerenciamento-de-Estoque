@@ -2,15 +2,6 @@
     margin: 0px;
 }
 
-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
 body{
     background-color: #2C3338;
 }
@@ -68,7 +59,8 @@ body{
 }
 
 .conteudo_index{
+    color: white;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }

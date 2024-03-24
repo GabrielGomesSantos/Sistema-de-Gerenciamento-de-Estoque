@@ -1,23 +1,18 @@
 <?php
     session_start();
-
-    
-
-
     if(!isset($_SESSION['perm'])){
 ?>
 
         <!-- Sem Login -->
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/style_index.css">
-        <title>Document</title>
-    </head>
-        
-    <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style_index.css">
+    <title>Document</title>
+</head>
+<header>
             
         <div class="img_logo_login">
             <img src="assets/img/Chilling_codes.png" alt="">
@@ -55,35 +50,18 @@
             
         <header>
                 
-            <div class="img_logo_login">
-                <img src="assets/img/Chilling_codes.png" alt="">
-            </div>
-
-            <?php 
-                if($_SESSION['perm'] == 1 or $_SESSION['perm'] == 3){
-                    echo("
-                        <div class='button_header'>
-                            <button onclick='window.location=\"src/pages/insert.php\"'>
-                                <p>Adicionar</p>
-                            </button>
-                        </div>
-                    ");
-
-                }
-
-
-            ?>
+            <?php include("src/pages/navbar_pesquisa.php");?>
     
         </header>
     
         </body>
 
                 <div class="conteudo_index">
-                    <?php include("src/pages/read.php")?>
-                    
-                    <br><br>
-                    <?php include("src/pages/avisos.php")?>
-                    
+
+                    <h1>Estoque dos produtos</h1>
+
+                    <h1>Baixas Quantidades</h1>
+
                 </div>
         </html>
     <body>

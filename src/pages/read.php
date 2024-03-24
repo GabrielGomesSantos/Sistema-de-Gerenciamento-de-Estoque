@@ -34,7 +34,7 @@
                 }
             ?>
             <?php
-                
+                session_start();
                 
                 $result = mysqli_query($conn, $sql); // Executa a consulta SQL
      
@@ -44,7 +44,8 @@
 
 
                     if (mysqli_num_rows($result) > 0) { // Verifica se existem resultados
-                        echo "<tr>
+                        if(!$_SESSION["perm"] == 2){
+                            echo "<tr>
                                 
                                 <th>NOME</th>
                                 <th>DESCRIÇÃO</th>
@@ -52,6 +53,14 @@
                                 <th>PREÇO</th>
                                 <th colspan=2>AÇÃO</th>
                             </tr>";
+                        }else{
+                            echo "<tr>
+                            <th>NOME</th>
+                            <th>DESCRIÇÃO</th>
+                            <th>QUANTIDADE</th>
+                            <th>PREÇO</th>
+                        </tr>";
+                        }
                     } else {
                         echo "<div class='resultado'><p>NENHUM RESULTADO ENCONTRADO</p></div>";
                     }
@@ -65,8 +74,8 @@
             <?php 
                  // Loop para imprimir os resultados
                  while ($row = mysqli_fetch_assoc($result)) {
-                    
-                    echo "<tr id='$row[id]'>
+                    if(!$_SESSION["perm"] == 2){
+                        echo "<tr id='$row[id]'>
                            
                             <td>$row[nome]</td>
                             <td>$row[descricao]</td>
@@ -75,6 +84,16 @@
                             <td> <a href='update.php?id=$row[id]'><button>EDITAR</button></a></td>
                             <td> <a href=''><button>REMOVER</button></a></td>
                           </tr>";
+                    }else{
+                        echo "
+                            <tr id='$row[id]'>
+                                <td>$row[nome]</td>
+                                <td>$row[descricao]</td>
+                                <td>$row[qnt]</td>
+                                <td class='preco'>R$:$row[preco]</td>
+                            </tr>
+                            ";
+                    }
                    
                 }
              

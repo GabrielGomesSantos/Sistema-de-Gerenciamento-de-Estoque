@@ -39,6 +39,16 @@
                 <input type="submit" value="Sign In">
             </div>
         </form>
+
+       <?php 
+            if(isset($_GET['ERROR'])){
+                echo("
+                    <div class='error'>
+                        <h4 class='error_texto'>Usuario e/ou senha incorretos!</h4>
+                    </div>
+                    "); 
+            }        
+       ?>
     </div>
 </div>
 

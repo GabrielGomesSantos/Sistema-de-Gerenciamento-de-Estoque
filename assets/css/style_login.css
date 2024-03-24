@@ -216,3 +216,9 @@ p {
 .text--center {
   text-align: center;
 }
+
+.error {
+  color: rgb(207, 34, 34); 
+  text-align: center;
+
+}
