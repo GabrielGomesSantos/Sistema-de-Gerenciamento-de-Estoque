@@ -222,3 +222,15 @@ p {
   text-align: center;
 
 }
+
+.img_logo_login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+}
+
+.img_logo_login img{
+  width: 100px;
+}

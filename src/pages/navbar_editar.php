@@ -12,10 +12,14 @@
         <div class="img_logo">
             <img src="../../assets/img/Chilling_codes.png" alt="">
         </div>
-    
+
+        <div class="titulo_header">
+            <h1>Editar Itens</h1>
+        </div>
+            
         <div class="button_header">
-            <button>
-                <p>Sair</p>
+            <button>    
+                Sair
             </button>
         </div>
     </div>

@@ -6,6 +6,7 @@ header{
     background-color: #2C3338;
     width: 100%;
     height: 80px;
+    margin-bottom: 60px;
 }
 
 .header, img{
@@ -29,6 +30,8 @@ header{
     border-radius: 12px;
     width: 100px;
     height: 50px;
+    color: white;
+    font-size: 20px;
 }
 
 .button_header button:hover{
@@ -38,16 +41,23 @@ header{
 
 .button_header p {
     color: white;
-    font-size: 16pt;
+    font-size: 20pt;
     text-align: center;
-
 }
 
 .inputext{
     background-color: #c7c7c7cc;
     border: none;
     text-decoration: none;
-    width: 900px;
+    width: 700px;
     height: 35px;
     border-radius: 12px;
+}
+
+.inputext{
+    text-align: center;
+}
+
+.titulo_header{
+    color: white;
 }

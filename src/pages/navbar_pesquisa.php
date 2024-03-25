@@ -15,18 +15,18 @@
         </div>
 
         <div class="pesquias">
-             <!-- FORM PARA BUSCAR  -->
-            <form action="read.php" method="GET">
+
+            <form action="index.php" method="GET">
                 <input class='inputext' type="text" name="busca" id="busca" placeholder="Digite sua busca aqui">
             </form>
         </div>    
 
-        <div class="button_header">
+        
 
     
             <?php 
                 
-                if($_SESSION['perm'] == 2){
+                if($_SESSION['perm'] == 1 or $_SESSION['perm'] == 3){
                     echo("
                         <div class='button_header'>
                             <button onclick='window.location=\"src/pages/insert.php\"'>
@@ -42,7 +42,7 @@
                 }else{
                     echo("
                     <div class='button_header'>
-                        <button>
+                        <button onclick='window.location=\"src/pages/sair.php\"'>
                             Sair
                         </button>
                     </div>
@@ -51,7 +51,7 @@
             ?>
              
             
-        </div>
+        
     </div>
 
 </header>

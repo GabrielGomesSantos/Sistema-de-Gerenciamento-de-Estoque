@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Login</title>
+    <link rel="shortcut icon" href="assets/img/Chilling_codes.png" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/style_login.css">
 </head>
 <body>
 
-<header>
-    <div class="img_logo_login">
-        <img src="../../assets/img/Chilling_codes.png" alt="">
-    </div>
-</header>
+<img src="../img/patter.png;" alt="">
 
 <div class="align">
     <div class="grid">
         <form action="login.php" method="POST" class="form login">
+
+        <div class="img_logo_login">
+            <img src="../../assets/img/Chilling_codes.png" alt="">
+        </div>
             <div class="form__field">
                 <label for="login__username">
                     <svg class="icon">

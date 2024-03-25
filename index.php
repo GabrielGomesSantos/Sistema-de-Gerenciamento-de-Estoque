@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style_index.css">
-    <title>Document</title>
+    <title>Seja Bem Vindo</title>
+    <link rel="shortcut icon" href="assets/img/Chilling_codes.png" type="image/x-icon">
 </head>
 <header>
             
@@ -39,30 +40,34 @@
         exit();
         }else?>
 
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="assets/css/style_index.css">
-            <title>Document</title>
-        </head>
-            
-        <header>
-                
-            <?php include("src/pages/navbar_pesquisa.php");?>
-    
-        </header>
-    
-        </body>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="assets/css/style_index.css">
+                <link rel="shortcut icon" href="assets/img/Chilling_codes.png" type="image/x-icon">
+                <title>DashBoard</title>
+            </head>
+
+            <header>
+                <?php include("src/pages/navbar_pesquisa.php");?>
+            </header>
+
+            <body>
 
                 <div class="conteudo_index">
+                    
+                    <div class="estoque">
+                        <h1>Estoque dos produtos:</h1>
+                        <?php include("src/pages/read.php");?>
+                    </div>
 
-                    <h1>Estoque dos produtos</h1>
-
-                    <h1>Baixas Quantidades</h1>
-
+                    <div class="aviso">
+                        <h1>Baixas Quantidades:</h1>                        
+                        <?php include("src/pages/avisos.php");?>
+                    </div>
                 </div>
-        </html>
-    <body>
-    </html>
+
+            </body>
+            </html>

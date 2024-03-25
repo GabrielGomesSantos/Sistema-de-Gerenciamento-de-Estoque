@@ -1,81 +1,58 @@
+<?php 
+    include("conexao.php"); 
+
+    $sql = "SELECT * FROM produtos WHERE qnt <= 50 ORDER BY qnt ASC";
+    $result = mysqli_query($conn, $sql); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style_read.css">
+    <link rel="stylesheet" href="assets/css/style_read.css">
 </head>
 <body>
-    <aside>
-
-            <!-- TABLE PARA IMPRIMIR O BANCO DE DADOS  -->
     <div class="content">
-    <table border="1">
+        <table>
 
-       
-        <thead>
-            
+            <thead>
+
                 <?php 
-                    include("conexao.php"); 
-
-                    $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
-                    $nome_da_table = 'produtos';
-                    $qnt_aviso = '30';
-
-                if (!empty($busca)) { 
-                    $sql = "SELECT * FROM $nome_da_table WHERE nome LIKE '%$busca%'";
-                } else {
-                    $sql = "SELECT * FROM $nome_da_table WHERE qnt <= '$qnt_aviso' ";
-                }
-            ?>
-            <?php
-                
-                
-                $result = mysqli_query($conn, $sql); 
-     
-                    
-                    
-                    $result = mysqli_query($conn, $sql); 
-
-
-                    if (mysqli_num_rows($result) > 0) { 
-                        echo "<tr>
-                                
-                                <th>NOME</th>
-                                <th>DESCRIÇÃO</th>
-                                <th>QUANTIDADE</th>
-                                <th>PREÇO</th>
-                                <th colspan=2>AÇÃO</th>
-                            </tr>";
-                    } else {
-                        echo "<div class='resultado'><p>NENHUM RESULTADO ENCONTRADO</p></div>";
-                    }
-
-                
+                    if (mysqli_num_rows($result) > 0) { // Verifica se existem resultados
                 ?>
-            
-        </thead>
-        
-        <tbody> 
-            <?php 
-                 
-                 while ($row = mysqli_fetch_assoc($result)) {
-                    
-                    echo "<tr id='$row[id]'>
-                           
-                            <td>$row[nome]</td>
-                            <td>$row[descricao]</td>
-                            <td>$row[qnt]</td>
-                            <td class='preco'>R$:$row[preco]</td>
-                            <td> <a href='update.php?id=$row[id]'><button>EDITAR</button></a></td>
-                            <td> <a href=''><button>REMOVER</button></a></td>
-                          </tr>";
-                   
-                }
-              
-            ?> 
-        </tbody>
-    </table> 
+                
+                <tr>
+                    <th>NOME</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>QUANTIDADE</th>
+                    <th>PREÇO</th>
+                </tr>
+                
+                <?php } else { ?>
 
-    </aside>
+                <div class="resultado"><p>NENHUM RESULTADO ENCONTRADO</p></div>;
+
+                <?php } ?>
+                
+            </thead>
+
+            <tbody> 
+
+                <?php 
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+
+                <tr id='<?php echo $row["id"]; ?>'>
+                    <td><?php echo $row["nome"]; ?></td>
+                    <td><?php echo $row["descricao"]; ?></td>
+                    <td><?php echo $row["qnt"]; ?></td>
+                    <td class='preco'>R$ <?php echo $row["preco"]; ?></td>
+                </tr>
+                <?php };?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
