@@ -74,8 +74,8 @@
                     <td><?php echo $row["descricao"]; ?></td>
                     <td><?php echo $row["qnt"]; ?></td>
                     <td class='preco'>R$ <?php echo $row["preco"]; ?></td>
-                    <td> <a href='src/pages/update.php?id=<?php echo $row["id"]; ?>'><button>EDITAR</button></a></td>
-                    <td> <a href='src/pages/delete.php?id=<?php echo $row["id"]; ?>'><button>REMOVER</button></a></td>
+                    <td> <a href='src/pages/update.php?id=<?php echo $row["id"]; ?>'><button class="button_acao">EDITAR</button></a></td>
+                    <td> <a href='src/pages/delete.php?id=<?php echo $row["id"]; ?>'><button class="button_acao">REMOVER</button></a></td>
                 </tr>
 
                 <?php } else { ?>

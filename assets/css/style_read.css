@@ -58,3 +58,18 @@ thead {
 .error_busca p{
     border: 1px solid;
 }
+
+.button_acao{
+    border: none;
+    text-decoration: none;
+    background-color: #7413F0;
+    border-radius: 12px;
+    width: 70px;
+    height: 30px;
+    color: white;
+}
+
+.button_acao:hover{
+    transition: all 0.4s;
+    background-color: #5A0FB9;
+}
