@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+}
+
+header{
+    background-color: #0B132B;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.262);
+    
+}
+
+.header, img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.img_logo{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button_header button {
+    border: none;
+    text-decoration: none;
+    background-color: #513e6b;
+    border-radius: 12px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.button_header button:hover{
+    transition: all 0.4s;
+    background-color: #5A0FB9;
+}
+
+.button_header p {
+    color: white;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.inputext{
+    background-color: #3FA2A0;    
+    border: none;
+    text-decoration: none;
+    width: 700px;
+    height: 35px;
+    border-radius: 12px;
+    
+}
+.inputext::placeholder{
+    color: white;
+}
+
+.inputext{
+    text-align: center;
+}
+
+.titulo_header{
+    color: white;
+}
+.pesquias {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.img_logo h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}

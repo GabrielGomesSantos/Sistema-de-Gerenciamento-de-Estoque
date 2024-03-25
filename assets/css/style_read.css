@@ -1,4 +1,5 @@
 * {
+<<<<<<< Updated upstream
     font-family: "Podkova", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -9,9 +10,17 @@ body {
     display: flex;
     flex-direction: column;
 }
+=======
+    font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+>>>>>>> Stashed changes
 
 table, td, th, tr {
-    border: 2px white solid;
+    border: 2px white transparent;
     border-collapse: collapse;
     padding: 10px;
 }
@@ -21,6 +30,7 @@ input {
 }
 
 table {
+<<<<<<< Updated upstream
     margin: 20px;
     padding: 0px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.272);
@@ -38,14 +48,37 @@ table {
 
 tr:nth-child(even) {
     background-color: white;
+=======
+    max-width: 840px; 
+    max-height: 600px;
+    
+    align-items: center;
+    
+}
+
+.content {
+    width: 100%;
+    max-height: 600px;
+    max-width: 1000px; 
+    overflow-y: auto; 
+    margin: 0 auto;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.531);
+    margin-top: 20px;
+   
+    
+}   
+
+tr:nth-child(even) {
+    background-color: #5BC0BE;
+>>>>>>> Stashed changes
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(186, 186, 186, 0.153);
+    background-color: #5bc0beb6;
 }
 
 th {
-    background-color: rgba(4, 19, 0, 0.968);
+    background-color: #0B132B;
     color: white;
     font-weight: bold;
 }
@@ -56,6 +89,7 @@ form {
     justify-content: center;
 }
 
+<<<<<<< Updated upstream
 .inputext {
     width: 300px;
 }
@@ -73,7 +107,13 @@ input {
     overflow-y: auto; /* Habilita a rolagem vertical */
 }
 
+=======
+>>>>>>> Stashed changes
 .table-container::-webkit-scrollbar {
+    display: none;
+    
+}
+.content::-webkit-scrollbar {
     display: none;
 }
   
@@ -83,3 +123,47 @@ thead {
     background-color: rgba(4, 19, 0, 0.968); /* Ajuste a cor de fundo conforme necessário */
     z-index: 1; /* Certifique-se de que o cabeçalho permaneça acima do conteúdo rolável */
 }
+<<<<<<< Updated upstream
+=======
+
+.error_busca {
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
+.error_busca p{
+    border: 1px solid;
+}
+
+.button_acao{
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 8px;
+    width: 70px;
+    height: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.button_acao:hover{
+    transition: all 0.4s;
+    background-color:#1f403f ;
+    color: white ; 
+}   
+
+.estoque h1{
+
+    margin-left: 20px;
+
+}
+
+.resultado p{
+
+    padding: 10px;
+    border-radius: 12px;
+
+}
+>>>>>>> Stashed changes

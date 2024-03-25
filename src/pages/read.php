@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../assets/css/style_read.css">
+<<<<<<< Updated upstream
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&display=swap" rel="stylesheet">
+=======
+    <link rel="stylesheet" href="assets/css/style_read.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Black&display=swap" rel="stylesheet">
+
+>>>>>>> Stashed changes
 </head>
 <body>
 
@@ -21,8 +29,48 @@
     <div class="content">
     <table border="1">
 
+<<<<<<< Updated upstream
        
         <thead>
+=======
+            <thead>
+    
+                <?php 
+                    if (mysqli_num_rows($result) > 0) { // Verifica se existem resultados
+                        if($_SESSION["perm"] != 2){
+                ?>
+                
+                <tr>
+                    <th>NOME</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>QUANTIDADE</th>
+                    <th>PREÇO</th>
+                    <th colspan=2>AÇÃO</th>
+                </tr>
+
+                <?php }else{ ?>
+                
+                <tr>
+                    <th>NOME</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>QUANTIDADE</th>
+                    <th>PREÇO</th>
+                </tr>
+                
+                <?php }
+                    } else {
+                ?>
+                
+                <div class="resultado">
+                    <img src="assets/img/notificacao.svg" width="712px" alt="">
+                    <br>
+                    <p class="error_busca">NENHUM RESULTADO ENCONTRADO</p>
+                </div>
+
+                <?php } ?>
+                
+            </thead>
+>>>>>>> Stashed changes
             
                 <?php 
                     include("conexao.php"); // PUXA A CONEXAO DO BANCO DE DADOS
