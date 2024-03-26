@@ -6,9 +6,11 @@
     <title>Painel de Login</title>
     <link rel="shortcut icon" href="assets/img/Chilling_codes.png" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/style_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik+Scribble&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,6 +22,7 @@
 
         <div class="img_logo_login">
             <img src="../../assets/img/Chilling_codes.png" alt="">
+            <h1>Chilling Codes</h1>
         </div>
             <div class="form__field">
                 <label for="login__username">

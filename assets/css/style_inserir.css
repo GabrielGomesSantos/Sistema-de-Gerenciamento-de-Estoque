@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
 *{
     margin: 0px;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body{
-    background-color: #2C3338;
+    background-color: #1C2541;
 }
 
 .conteudo {
@@ -18,7 +19,7 @@ body{
 .button_inserir {
     border: none;
     text-decoration: none;
-    background-color: #7413F0;
+    background-color: #513e6b;
     border-radius: 12px;
     width: 100px;
     height: 50px;
@@ -27,7 +28,7 @@ body{
 
 .button_inserir:hover{
     transition: all 0.4s;
-    background-color: #5A0FB9;
+    background-color: #44bcba80;
 }
 
 .button_inserir {
@@ -65,4 +66,23 @@ body{
 
 .buttuns{
     margin-top: 30px;
+}
+
+input {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding-left: 3PX;
+    margin: 20px;
+}
+
+label {
+    margin: 10px;
+}
+
+.titulo_header h1{
+
+    margin-right: 240px;
+
 }

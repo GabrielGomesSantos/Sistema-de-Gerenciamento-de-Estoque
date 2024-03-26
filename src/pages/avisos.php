@@ -35,7 +35,7 @@
                 
                 <?php } else { ?>
 
-                <div class="resultado"><p>NENHUM RESULTADO ENCONTRADO</p></div>;
+                <div class="resultado"><p>SEM PRODUTO EM BAIXA QUANTIDADE</p></div>
 
                 <?php } ?>
                 

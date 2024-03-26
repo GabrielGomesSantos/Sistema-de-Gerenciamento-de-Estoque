@@ -25,7 +25,8 @@
     <link rel="shortcut icon" href="../../assets/img/Chilling_codes.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Black&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <title>Editando Produto: <?php echo($produto[0]['nome'])?></title>   
 </head>
 
@@ -52,7 +53,7 @@
             <input type="hidden" name="id" value=<?php echo $_GET["id"]?>>
     
             <div class="buttons">
-                <button type="submit" class="button_update">SALVAR</button>
+                <button type="submit" class="button_update">Salvar</button>
                 <button class="button_update" onclick="window.location='../../index.php'">Voltar</button>
 
             </div>

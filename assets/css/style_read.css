@@ -1,15 +1,50 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 table, td, th, tr {
-    border: 2px white solid;
+    border: 2px white transparent;
     border-collapse: collapse;
     padding: 10px;
-    text-align: center;
+}
+
+input {
+    font-size: 15px;
 }
 
 table {
+    margin: 20px;
+    padding: 0px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.272);
+}
+
+.content {
+    max-height: 700px; /* Defina a altura máxima desejada para a área de rolagem */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+    margin: 0 auto; /* Centraliza a tabela */
+    margin-top: 20px;
+}
+
+.content::-webkit-scrollbar{
+    display: none;
+}
+
+tr:nth-child(even) {
+    background-color: white;
     max-width: 840px; 
     max-height: 600px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.272);
     align-items: center;
+    
 }
 
 .content {
@@ -18,29 +53,55 @@ table {
     max-width: 1000px; 
     overflow-y: auto; 
     margin: 0 auto;
+
     margin-top: 20px;
-}
+}   
 
 tr:nth-child(even) {
-    background-color: rgb(136, 136, 136);
+    background-color: #5BC0BE;
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(186, 186, 186, 0.153);
+    background-color: #5bc0beb6;
 }
 
 th {
-    background-color: rgba(4, 19, 0, 0.968);
+    background-color: #0B132B;
     color: white;
     font-weight: bold;
 }
 
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.inputext {
+    width: 300px;
+}
+
+input {
+    padding: 4px;
+}
+
+.preco {
+    font-weight: bold;
+}
+
+.table-container {
+    max-height: 700px; /* Defina a altura máxima desejada para a área de rolagem */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
 
 .table-container::-webkit-scrollbar {
     display: none;
+    
 }
-  
+.content::-webkit-scrollbar {
+    display: none;
+}
+    
 thead {
     position: sticky;
     top: 0;
@@ -51,7 +112,7 @@ thead {
 .error_busca {
     align-items: center;
     text-align: center;
-    color: rgb(98, 56, 224);
+    color: white;
     font-size: large;
 }
 
@@ -62,14 +123,28 @@ thead {
 .button_acao{
     border: none;
     text-decoration: none;
-    background-color: #7413F0;
-    border-radius: 12px;
+    background-color: white;
+    border-radius: 8px;
     width: 70px;
     height: 30px;
-    color: white;
+    color: black;
+    font-weight: bold;
+    padding: 3px;
+    font-size: 12px;
 }
 
 .button_acao:hover{
     transition: all 0.4s;
-    background-color: #5A0FB9;
+    background-color:#1f403f ;
+    color: white ; 
 }   
+
+.estoque h1{
+    margin-left: 20px;
+}
+
+.resultado p{
+    padding: 10px;
+    border-radius: 12px;
+}
+

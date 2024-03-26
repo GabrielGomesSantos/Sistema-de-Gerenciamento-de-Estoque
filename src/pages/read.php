@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="assets/css/style_read.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik+Scribble&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -76,7 +81,7 @@
                     <td><?php echo $row["nome"]; ?></td>
                     <td><?php echo $row["descricao"]; ?></td>
                     <td><?php echo $row["qnt"]; ?></td>
-                    <td class='preco'>R$ <?php echo $row["preco"]; ?></td>
+                    <td class='preco' >R$ <?php echo $row["preco"]; ?></td>
                     <td> <a href='src/pages/update.php?id=<?php echo $row["id"]; ?>'><button class="button_acao">EDITAR</button></a></td>
                     <td> <a href='src/pages/delete.php?id=<?php echo $row["id"]; ?>'><button class="button_acao">REMOVER</button></a></td>
                 </tr>
